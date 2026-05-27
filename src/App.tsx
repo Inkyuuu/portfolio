@@ -171,10 +171,10 @@ function App() {
         <div className="portrait-stage" aria-label="Abstract personal portrait">
           <div className="portrait-card">
             <div className="portrait-grid">
-              <label title="Senso-ji, Tokyo, Japan"> <img src="/image0.jpg" alt="Portfolio image" /></label>
-              <label title="Ginza, Tokyo, Japan"> <img src="/image1.jpg" alt="Portfolio image" /> </label>
-              <label title="Big Sur, California, US"> <img src="/image2.jpg" alt="Portfolio image" /> </label>
-              <label title="Anhui, China"> <img src="/image3.jpg" alt="Portfolio image" /> </label>
+              <label title="Senso-ji, Tokyo, Japan"> <img src="image0.jpg" alt="Portfolio image" /></label>
+              <label title="Ginza, Tokyo, Japan"> <img src="image1.jpg" alt="Portfolio image" /> </label>
+              <label title="Big Sur, California, US"> <img src="image2.jpg" alt="Portfolio image" /> </label>
+              <label title="Anhui, China"> <img src="image3.jpg" alt="Portfolio image" /> </label>
             </div>
             <div className="portrait-mark">AZ</div>
             <div className="orbit orbit-one" />
@@ -253,7 +253,7 @@ function App() {
       <section className="section about-section reveal" id="about">
         <div>
           <p className="eyebrow">About</p>
-          <h2 className="text-reveal text-zoom">Chronic software niche explorer&mdash; never heard of staying in one lane.</h2>
+          <h2 className="text-reveal text-zoom">Chronic software niche explorer&mdash; no such thing as staying in one lane ;)</h2>
         </div>
         <div>
           <p>
