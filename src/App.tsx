@@ -3,6 +3,14 @@ import './App.css'
 
 const projects = [
   {
+    name: 'Food Recall Search',
+    type: 'Full-Stack Web App',
+    description:
+      'Developed a React and Flask-based web app that scrapes FDA food recall data, allowing users to search and filter recalls by various criteria with an intuitive interface.',
+    year: 'MAY 2026',
+    link: 'https://inkyuuu.github.io/recall-checker/',
+  },
+  {
     name: 'MITRE ATT&CK Command Generator',
     type: 'AI + Security',
     description:
