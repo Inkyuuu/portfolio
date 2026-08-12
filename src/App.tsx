@@ -30,6 +30,13 @@ const projects = [
 
 const jobs = [
   {
+    title: 'Testing and Repair Technician',
+    company: 'Aivres Systems',
+    description:
+      'Performed root cause analysis on failed rack servers by troubleshooting and repairing hardware, firmware, and system configuration issues, as well as PIA testing and validation on rack server systems to verify hardware, firmware, and configuration readiness.',
+    year: 'JUL 2026 - PRESENT',
+  },
+  {
     title: 'Academic Tutor',
     company: 'Beginning Programming in Python: CSE 20, UC Santa Cruz',
     description:
