@@ -231,7 +231,20 @@
 
 /* center the left column content vertically relative to the right column */
 .intro-copy {
+  display: grid;
+  gap: clamp(18px, 3vw, 28px);
   align-self: center;
+}
+
+.intro-side-copy {
+  max-width: 640px;
+}
+
+.intro-side-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.5;
 }
 
 .job-panel {

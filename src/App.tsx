@@ -201,9 +201,21 @@ function App() {
       <section className="section intro reveal" aria-label="Profile summary">
         <div className="intro-copy">
           <h2 className="text-reveal text-zoom" data-trigger="partial">
-            Currently finishing my B.S. in Computer Science and continuing into an
-            M.S.
+            Starting my journey as a Master's student this fall.
           </h2>
+          <div className="intro-side-copy" aria-label="Work background">
+            <p>
+              &emsp;&emsp;My experience as a repair and testing technician has given me a strong understanding of server architecture, design, diagnostic tools, as well as teamwork & communication.
+              This includes an understanding of BMC, IPMI, Linux troubleshooting, and networking concepts.
+              In addition, I've developed thorough diagnostic , troubleshooting, and problem-solving skills, which have been invaluable in my software development work.
+            </p>
+            <p>
+              &emsp;&emsp;My academic background has been filled with exceptional individuals who have mentored and inspired me in many ways.
+              While I have learned much from my experience as a computer science student and my work background, I also strive to pass it on onto others by becoming a tutor for the students in my community.
+              Through my tutoring experience, I have developed strong interpersonal skills and a passion for education
+
+            </p>
+          </div>
         </div>
 
         <div className="job-panel" aria-label="Job experience">
@@ -214,8 +226,9 @@ function App() {
             {jobs.map((job) => (
               <article className="project-card job-card reveal" key={`${job.company}-${job.title}`}>
                 <div>
-                  <span className="project-type">{job.title}</span>
-                  <h3>{job.company}</h3>
+                  <span className="project-type">{job.company}</span>
+                  <h3>{job.title}</h3>
+
                 </div>
                 <p>{job.description}</p>
                 <span className="project-year">{job.year}</span>
@@ -268,19 +281,19 @@ function App() {
       <section className="section about-section reveal" id="about">
         <div>
           <p className="eyebrow">About</p>
-          <h2 className="text-reveal text-zoom">Chronic software niche explorer&mdash; no such thing as staying in one lane ;)</h2>
+          <h2 className="text-reveal text-zoom">Always expanding my skillset&mdash; no such thing as staying in one lane ;)</h2>
         </div>
         <div>
           <p>
-            My background combines machine learning, cybersecurity, and distributed computing.
+            &emsp;&emsp;My background combines machine learning, cybersecurity, and distributed computing.
             I've also dabbled in parallel programming and databases. I enjoy working in a variety of software niches, and I'm open to learning whatever new skills may be needed to build my next idea.
       
           </p>
           <p>
-            In my free time, I enjoy playing video games, building and tweaking mechanical keyboards, and traveling. 
+            &emsp;&emsp;In my free time, I enjoy playing video games, building and tweaking mechanical keyboards, and traveling. 
           </p>
           <p className="about-subtext">
-            Passionate about education and mentoring.
+            &emsp;&emsp;Passionate about education and mentoring.
           </p>
         </div>
       </section>
