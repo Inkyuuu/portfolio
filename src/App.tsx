@@ -212,7 +212,7 @@ function App() {
             <p>
               &emsp;&emsp;My academic background has been filled with exceptional individuals who have mentored and inspired me in many ways.
               While I have learned much from my experience as a computer science student and my work background, I also strive to pass it on onto others by becoming a tutor for the students in my community.
-              Through my tutoring experience, I have developed strong interpersonal skills and a passion for education
+              Through my tutoring experience, I have developed strong interpersonal skills and a passion for education.
 
             </p>
           </div>
