@@ -100,6 +100,49 @@
   font-size: clamp(1.1rem, 2vw, 1.45rem);
 }
 
+.paragraph-reveal {
+  opacity: 0;
+  transition: opacity 720ms ease var(--paragraph-delay, 0ms);
+}
+
+.paragraph-reveal.is-visible {
+  opacity: 1;
+}
+
+.typewriter {
+  width: 0;
+  overflow: hidden;
+  border-right: 0.08em solid currentColor;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  white-space: nowrap;
+  animation:
+    typewriter 10s steps(24, end) infinite,
+    caret-blink 750ms step-end infinite;
+}
+
+@keyframes typewriter {
+  0%,
+  4% {
+    width: 0;
+  }
+
+  34%,
+  77% {
+    width: 24ch;
+  }
+
+  99%,
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes caret-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -647,5 +690,16 @@
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
+  }
+
+  .typewriter {
+    width: auto;
+    border-right: 0;
+    animation: none !important;
+  }
+
+  .paragraph-reveal {
+    opacity: 1;
+    transition: none;
   }
 }

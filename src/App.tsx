@@ -130,6 +130,53 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    const paragraphs = Array.from(
+      document.querySelectorAll<HTMLParagraphElement>('p:not(.typewriter)'),
+    ).filter(
+      (paragraph) =>
+        !paragraph.closest('.project-card') &&
+        !paragraph.classList.contains('eyebrow'),
+    )
+
+    paragraphs.forEach((paragraph) => paragraph.classList.add('paragraph-reveal'))
+
+    if (!('IntersectionObserver' in window)) {
+      paragraphs.forEach((paragraph) => paragraph.classList.add('is-visible'))
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const enteringParagraphs = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((first, second) => {
+            const position = first.target.compareDocumentPosition(second.target)
+            return position & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1
+          })
+
+        enteringParagraphs.forEach((entry, index) => {
+            const paragraph = entry.target as HTMLParagraphElement
+            paragraph.style.setProperty('--paragraph-delay', `${250 + index * 120}ms`)
+            paragraph.classList.add('is-visible')
+          })
+
+        entries
+          .filter((entry) => !entry.isIntersecting)
+          .forEach((entry) => {
+            const paragraph = entry.target as HTMLParagraphElement
+            paragraph.classList.remove('is-visible')
+            paragraph.style.removeProperty('--paragraph-delay')
+          })
+      },
+      { threshold: 0.2 },
+    )
+
+    paragraphs.forEach((paragraph) => observer.observe(paragraph))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <main className="site-shell">
       <div
@@ -161,7 +208,7 @@ function App() {
         <div className="hero-copy">
           <p className="eyebrow">Computer science student and aspiring software engineer</p>
           <h1 className="text-reveal text-zoom" data-trigger="partial">Building anything</h1>
-          <p className="hero-text">
+          <p className="hero-text typewriter">
             printf("Hello, World!");
           </p>
           <p className="hero-text">
