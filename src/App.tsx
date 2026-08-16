@@ -7,6 +7,7 @@ const projects = [
     type: 'Full-Stack Web App',
     description:
       'Developed a React and Flask-based web app that scrapes FDA food recall data, allowing users to search and filter recalls by various criteria with an intuitive interface.',
+    skills: ['Python', 'Flask', 'Gunicorn', 'PostgreSQL', 'Supabase', 'React', 'TypeScript', 'CSS'],
     year: 'MAY 2026',
     link: 'https://inkyuuu.github.io/recall-checker/',
   },
@@ -15,6 +16,7 @@ const projects = [
     type: 'AI + Security',
     description:
       'Built an LLM-powered pipeline with Qwen2.5-7B-Instruct to synthesize Linux shell commands mapped to MITRE ATT&CK techniques, with syntax validation and dataset export.',
+    skills: ['Python', 'PyTorch', 'Hugging Face', 'LLMs', 'Prompt Engineering', 'NLP', 'Generative AI', 'CUDA', 'Pandas', 'MITRE ATT&CK', 'Cybersecurity'],
     year: 'DEC 2025',
     link: 'https://github.com/Inkyuuu/MITRE-ATTACK-CMD-GEN',
   },
@@ -23,6 +25,7 @@ const projects = [
     type: 'Full-Stack Web App',
     description:
       'Collaborated on a React note-taking app with responsive UI components, AI-powered features, authentication flows, and sharing/settings modals.',
+    skills: ['React', 'TypeScript', 'Python', 'Flask', 'CSS', 'REST APIs', 'OpenAI API', 'Pinecone', 'RAG', 'Generative AI', 'Full-Stack Development'],
     year: 'JAN-MAR 2025',
     link: 'https://cse115a-noteflow.github.io/noteflow/',
   },
@@ -318,7 +321,19 @@ function App() {
                 <span className="project-type">{project.type}</span>
                 <h3>{project.name}</h3>
               </div>
-              <p>{project.description}</p>
+              <div className="project-details">
+                <p>{project.description}</p>
+                <span className="project-toggle" aria-hidden="true">
+                  <svg viewBox="0 0 10 10" role="presentation" focusable="false">
+                    <path d="M2 1.5 8 5 2 8.5Z" />
+                  </svg>
+                </span>
+                <ul className="project-skills" aria-label={`${project.name} skills`}>
+                  {project.skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
               <span className="project-year">{project.year}</span>
             </article>
           ))}
